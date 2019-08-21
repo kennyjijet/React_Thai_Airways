@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../App.css';
 import axios from 'axios';
 
 class Seat extends Component {
@@ -22,7 +23,6 @@ class Seat extends Component {
         }
         if (this.props.reserved == true){
             return (
-
             <li className="seat"  style={style}>
              <input type="radio"  ref={seat._id} id={seat._id} name="seat_id" key={seat._id} value={seat._id} 
               onChange={(e) => this.handleSeatChange(e)}
@@ -43,7 +43,6 @@ class Seat extends Component {
             );
         }
         else if(seat.available == false){
-            
             return (
                 <li className="seat"  style={style}>
                     <input type="radio" disabled key={seat._id} />
@@ -52,8 +51,7 @@ class Seat extends Component {
                  );
         }else if(seat.available == true){
             return (
-
-                 <li className="seat"  style={style}>
+                <li className="seat"  style={style}>
                 <input type="radio"  ref={seat._id} id={seat._id} name="seat_id" key={seat._id} value={seat._id} 
                  onChange={(e) => this.handleSeatChange(e)}
                 />

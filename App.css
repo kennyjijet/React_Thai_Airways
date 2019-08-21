@@ -1,23 +1,27 @@
 #app {
 }
 
-h1 {
-  text-align: center;
-}
-
 .container {
   width: 600px;
   margin: auto;
+
+}
+
+.grid{
+
+  display: inline-block;
+  background-image: url(./Assets/bg_general.png);
+
 }
 
 .grid td {
-  width: 80px;
-  height: 50px;
+  display: inline-block;
+  height: 150px;
   padding: 50px 30px;
   border: 2px solid orange;
   text-align: center;
-  float: left;
-  margin: 5px;
+  margin: 24px;
+
 }
 
 .grid td:hover {
@@ -26,11 +30,12 @@ h1 {
 }
 
 .reserved {
-  background: orange;
+  background: red;
   color: #fff;
-  display: inline-block;
+  display: inline-block !important;
 }
 
+/*
 .reserved::after {
   content: 'RESERVED'
 }
@@ -38,10 +43,12 @@ h1 {
 .available::after {
   content: 'AVAILABLE'
 }
+*/
 
 .available {
-  color: #333;
+  color: #fff;
 }
+
 
 li {
   list-style: none;
